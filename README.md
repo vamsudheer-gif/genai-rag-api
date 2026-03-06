@@ -6,32 +6,62 @@ The system retrieves relevant context using embeddings and generates answers usi
 
 ---
 
-## Architecture
+# Architecture
 
 User Question  
 ↓  
 Embedding Generation  
 ↓  
-Vector Similarity Search  
+Vector Similarity Search (FAISS)  
 ↓  
 Retrieve Top Chunks  
 ↓  
 Send Context + Question to LLM  
 ↓  
-Generated Answer  
+Generated Answer
 
 ---
 
-## Tech Stack
+# Features
+
+• PDF document ingestion  
+• Text chunking with overlap  
+• Embedding generation using Ollama  
+• FAISS vector similarity search  
+• Retrieval-Augmented Generation (RAG)  
+• FastAPI REST API for querying documents  
+• Local LLM inference (no OpenAI API required)
+
+---
+
+# Tech Stack
 
 Python  
 FastAPI  
-Ollama (LLM)  
+Ollama (Llama3.1)  
+FAISS (Vector Database)  
 NumPy  
-Vector Similarity Search  
+PyPDF (PDF parsing)  
+Embeddings  
+Semantic Search
 
 ---
 
-## Run the Project
+# Project Structure
 
-Install dependencies:
+genai-rag-api/
+
+documents/        # PDF files  
+rag/              # chunking + pdf loader  
+main.py           # FastAPI application  
+build_index.py    # build vector index  
+test_chunks.py    # test chunking logic  
+requirements.txt  
+vector.index      # FAISS index  
+chunks.json       # stored text chunks  
+
+---
+
+# Run the Project
+
+### 1 Clone Repository
