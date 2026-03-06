@@ -1,4 +1,5 @@
 # GenAI RAG API (FastAPI + Ollama)
+End-to-end Retrieval-Augmented Generation (RAG) API using FastAPI, FAISS, and Ollama with PDF document ingestion and semantic search.
 
 This project demonstrates a Retrieval-Augmented Generation (RAG) system built using FastAPI and a local LLM via Ollama.
 
